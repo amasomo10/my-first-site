@@ -1,15 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>RwandAg</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/psite.css' %}">
   </head>
   <body>
-    <div>
-        <h1><a href="/">Rwanda Agriculture</a></h1>
+    <nav>
+      <ul>
+        <img src="../static/css/logo.png" >
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="#">Important Links</a>
+          <ul>
+            <li><a href="#">MINAGRI</a></li>
+            <li><a href="#">RAB</a></li>
+            <li><a href="#">Updates</a></li>
+            <li><a href="#">Videos</a></li>
+          </ul>
+        </li>
+        <li><a href="projects">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="top-part">
+        <div class="auto-slider">
+          <ul class="auto-slider_conentent">
+            <li><img src="../static/css/slider1.jpg" alt="Corn 1" style="width:580px;height:360px;"></li>
+            <li><img src="../static/css/slider2.jpg" alt="Cattle 1" style="width:580px;height:360px;"></li>
+            <li><img src="../static/css/slider3.jpg" alt="Dealing" style="width:580px;height:360px;"></li>
+            <li><img src="../static/css/slider4.jpg" alt="Corn 2" style="width:580px;height:360px;"></li>
+            <li><img src="../static/css/slider5.jpg" alt="Cattle 2" style="width:580px;height:360px;"></li>
+          </ul>
+        </div>
     </div>
-    <div>
-       <p>published: 14.06.2014, 12:14</p>
-       <h2><a href="">My first post</a></h2>
+    <div class="middle-part">
+       <h2><a href="">Three points are loading</a></h2>
        <p>Aenean eu leo quam. And so on ........</p>
+    </div>
+    <div class="bottom-part"
+       <h2><a href="">Video here is loading...</a></h2>
+    </div>
   </body>
 </html>

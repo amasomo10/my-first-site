@@ -1,5 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: #1A1554;
+  margin-top: 5px;
+}
+
+nav img{
+  width: 180px;
+  height: 55px;
+  margin-right: 150px;
+}
+nav ul{
+  padding-top: 5px;
+  display: inline-flex;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  float: right;
+  position: relative;
+  line-height: 20px;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding-top: 15px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  background: green;
+  font-size: 18px;
+  font-family: 'Volkhov', serif;
+  color: white;
+  margin: 12px;
+  padding: 5px 50px;
+}
+nav ul li a:hover {
+  background: white;
+  color: red;
+  border-radius: 10px;
+}
+
+nav ul li ul{
+  display: none; /* Navigation bar to be set */
+  position: absolute;
+  background-color: #DFEAEB;
+  z-index: 1000;
+}
+
+nav ul li:hover ul{
+  display: block;
+}
+
+nav ul li ul li{
+  float: left;
+  border: none;
+  z-index: 1000;
+}
+
+.top-part{
+  background-image: url("./topbackground.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
+.auto-slider{
+  padding-top: 100px;
+  padding-left:250px;
+  overflow: hidden;
+}
+.auto-slider_conentent{
+  list-style: none;
+  display: flex;
+  position: right;
+  /*animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; */
+  animation: slide 15s ease-in-out infinite;
+  /* animation-direction: alternate-reverse; */
+}
+
+.auto-slider_conentent:hover{
+  animation-play-state: paused;
+}
+
+@keyframes slide{
+  5%{
+    transform: translateX(0);
+  }
+  20%%, 25%{
+    transform: translateX(-580px);
+  }
+  40%, 45%{
+    transform: translateX(-1160px);
+  }
+  60%, 65%{
+    transform: translateX(-1740px);
+  }
+  75%, 80%{
+    transform: translateX(-2320px);
+  }
+  90%, 95%{
+    transform: translateX(0);
+  }
+}
+
+.auto-slider_conentent img{
+  outline: 1px solid red;
+  width: 580px;
+  height: 360px;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.middle-part{
+  background-color: #10846C;
+  height: 200px;
+}
+
+.bottom-part{
+  background-image: url("./bottomone.jpg");
+  background-size: cover;
+  background-color: #9DA971;
+  height: 800px;
+  opacity: 0.5;
+}
+h1 a, h2 a {
+    color: #C25100;
+}
+
 body {
   padding-left: 50px;
   padding-right: 50px;
   background-color: #DFEAEB;
+}
+
+
+/* MEDIA QUERRIES */
+/* Mobile Styles */
+@media only screen and (max-width: 1120px) {
+  nav ul{
+    width: 100%;
+    position: static;
+    display: block;
+  }
+  nav ul li{
+    width: 100%;
+    border: none;
+  }
+  nav ul li ul li a{
+    width: 10px;
+  }
+  .auto-slider{
+    padding-top: 30px;
+  }
 }
