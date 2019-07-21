@@ -164,4 +164,8 @@ body {
   .auto-slider{
     padding-top: 30px;
   }
+  body {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
