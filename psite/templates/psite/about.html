@@ -3,34 +3,120 @@
 <html lang="en">
   <head>
     <title>RwandAg</title>
+    <link rel="shortcut icon" type="image/png" href="../static/css/favicon.png">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/psite.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
-    <nav>
-      <ul>
-        <img src="../static/css/logo.png" >
-        <li><a href="/">Home</a></li>
-        <li><a href="../about">About</a></li>
-        <li><a href="#">Important Links</a>
+      <div id="body">
+        <nav>
           <ul>
-            <li><a href="#">MINAGRI</a></li>
-            <li><a href="#">RAB</a></li>
-            <li><a href="#">Updates</a></li>
-            <li><a href="#">Videos</a></li>
+            <a href="/"><img src="../static/css/logo.png" ></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="../about">About</a></li>
+            <li><a href="#">Important Links</a>
+              <ul>
+                <li><a href="https://www.minagri.gov.rw/index.php?id=16" target="_blank">MINAGRI</a></li>
+                <li><a href="http://www.rab.gov.rw/index.php?id=180" target="_blank">RAB</a></li>
+                <li><a href="https://twitter.com/RwandaAgri" target="_blank">Updates</a></li>
+                <li><a href="https://www.youtube.com/channel/UCB-oYINxgCdmyEnPi-SWAZw/videos" target="_blank">Videos</a></li>
+              </ul>
+            </li>
+            <li><a href="../projects">Projects</a></li>
           </ul>
-        </li>
-        <li><a href="../projects">Projects</a></li>
-      </ul>
-    </nav>
-
-    <h2>ABOUT Page</h2>
-      <p>Get ready to know more about us...</p>
-
-
-      <!-- <p> MANUALLY EXTEND MIDDLE AND BOTTOM PATRS OF THE HOME PAGE </p> -->
+        </nav>
+        <br>
+        <div class="about-part">
+            <h2>ABOUT RWANDAG</h2>
+              <p>Despite continual Rwanda’s economy growth, agriculture sector faces challenges of accessing
+                finances to improve and expand operations. Rwanda commercial banks reported that only
+                <a href="https://agroinsurance.com/en/rwanda-agriculture-insurance-should-stimulate-commercial-bank-lending-to-farmers/" target="_blank">1.2 percent</a>
+                of their entire loan portfolios went to the agriculture sector in 2018. This makes courageous
+                farmers operate below their potential. RwandAg is here to help Rwandan farmers to access finances from
+               foreign investors.</p>
+            <!--through FarmAfield, an Ag-Tech Company from Nebraska, Lincoln, USA, that facilitates people to invest in Agriculture-->
+            <br>
+            <div class="aboutpoints">
+              <div class="aboutpoint">
+                <h2><strong>Opportunity</strong> for investors to diversify their investments portfolio</h2>
+              </div>
+            </div>
+            <div class="aboutpoints">
+              <div class="aboutpoint">
+                <h2><strong>RwandAg</strong> connects Rwandan farmers to foreign investors</h2>
+              </div>
+            </div>
+            <div class="aboutpoints">
+              <div class="aboutpoint">
+                <h2><strong>Growth</strong> of agricultural production for farmers and investors returns</h2>
+              </div>
+            </div>
+            <br>
+            <h2>MISSION</h2>
+              <p style="text-align:center;">Connecting Rwandan farmers to agricultural investors for sustainable Rwanda Food Security<p>
+            <br>
+            <h2>MAIN ACTIVITIES</h2>
+              <ul>
+                <li>Identifying potential farmers or cooperatives</li>
+                <li>Evaluating prospects’ operations, planned projects, and ensure proper implementation</li>
+                <li>Developing an online platform for farmers with basic services (farm profit calculator) and
+                 agricultural updates from major Rwanda agricultural institutions</li>
+              </ul>
+        <!-- <p> MANUALLY EXTEND MIDDLE AND BOTTOM PATRS OF THE HOME PAGE </p> -->
+        <br>
+        <div class="numbers-part">
+          <h2>Welcome! Farm Profit Calculator here <a href="../calculation" target="_blank">Do my numbers</a></h2>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="agriquotes">
+        <p><strong>For the bests of agriculture</strong></p>
+        <img src="../static/css/agriquotes.jpg">
+        <br>
+        <br>
+        <img src="../static/css/agriquotess.jpg">
+      </div>
+      <div class="twandikire">
+          <a href="../contact" target="_blank"><strong>Contact us</strong></a>
+      </div>
+        <footer id="footer">
+            <div class="contact-home" id="our-contact">
+              <h2>Our Mission<h2>
+                <h4>Connecting Rwandan farmers to agricultural investors for sustainable Rwanda Food Security </h4>
+                <div class="location">
+                  <div class="location-box">
+                    <div class="location-icon"><i class="fa fa-map-marker" aria-hidden="true"></i> Our Location</div>
+                    <div class="location-details">Rwanda</div>
+                  </div>
+                  <div class="location-box">
+                    <div class="location-icon"><i class="fa fa-phone" aria-hidden="true"></i> Call Us</div>
+                    <div class="location-details">+250 732 393 402</div>
+                  </div>
+                  <div class="location-box">
+                    <div class="location-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i> Write Us</div>
+                    <div class="location-details"><a href="../contact" target="_blank">Contact us</a></div>
+                  </div>
+                </div>
+            </div>
+            <div class="copyright">
+              <p><i class="fa fa-copyright" aria-hidden="true"></i>  2019  RwandAg</p>
+            </div>
+      </div>
+    </footer>
   </body>
 </html>

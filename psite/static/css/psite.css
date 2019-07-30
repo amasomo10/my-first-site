@@ -7,6 +7,18 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+  height:100%;
+  background-color: #DFEAEB;
+}
+
+
+h1 a, h2 a {
+    color: #C25100;
+}
+
 nav{
   width: 100%;
   height: 60px;
@@ -48,13 +60,15 @@ nav ul li a:hover {
   background: white;
   color: red;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 nav ul li ul{
   display: none; /* Navigation bar to be set */
   position: absolute;
-  background-color: #DFEAEB;
+  background-color: #1A1554;
   z-index: 1000;
+  height: 160px;
 }
 
 nav ul li:hover ul{
@@ -86,8 +100,15 @@ nav ul li ul li{
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out; */
-  animation: slide 15s ease-in-out infinite;
+  animation: slide 20s ease-in-out infinite;
   /* animation-direction: alternate-reverse; */
+}
+
+.auto-slider_conentent li h2{
+  text-align: center;
+  padding-left: 20px;
+  color: white;
+  font-size: 30px;
 }
 
 .auto-slider_conentent:hover{
@@ -123,27 +144,355 @@ nav ul li ul li{
   margin-right: 10px;
 }
 
+/* ICONS IN THE MIDDLE */
 .middle-part{
   background-color: #10846C;
-  height: 200px;
+  height: 250px;
+  text-align: center;
+  margin-top: 10px;
 }
+
+.icon{
+  margin-top: 10px;
+  display:inline-flex;
+  color: white;
+  width: 20%;
+  margin: 5px 50px;
+  justify-content: center;
+}
+
+/* ABOUT PAGE HERE */
+.about-part{
+  padding: 15px 120px;
+}
+
+.about-part h2{
+  text-align: center;
+}
+.about-part p, ul{
+  font-size: 20px;
+}
+.agriquotes p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.agriquotes img{
+  width: 50%;
+  margin: 1px auto;
+  display: block;
+  height: 60%;
+}
+
+/* PROJECTS PAGE HERE */
+
+.project-part{
+  padding: 15px 120px;
+}
+
+.project-part h1, h3{
+  text-align: center;
+}
+
+.nyamasheke{
+  display: block;
+}
+
+.nyamasheke p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.nyamasheke img{
+  width: 50%;
+  margin: 1px auto;
+  display: block;
+  height: 60%;
+}
+
+.project-part p{
+  font-size: 20px;
+}
+
+
+
+/* CALCULATE HOMEPAGE BUTTON HERE */
+
+.numbers-part{
+  background-color: #2CC205;
+  height: 90px;
+  width: 100%;
+  border: 1px solid red;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+.numbers-part a{
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  padding: 0 30px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  z-index: 1;
+}
+
+.numbers-part a:hover{
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  0%{
+    background-position: 400%;
+  }
+}
+.numbers-part a:before{
+  content:'';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+}
+.numbers-part a:hover:before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+/* CALCULATOR PAGE */
+
+.amafaranga{
+  padding: 15px 80px;
+}
+
+
+.amafaranga p{
+  font-size: 20px;
+}
+
+.amafaranga ul{
+  list-style: none;
+}
+
+caption{
+  background-color: #98FB98;
+  background-size: cover;
+  height: 50px;
+  font-size: 30px;
+}
+
+.panel2 {
+    background-color: #eeeeee;
+    padding: 5px;
+    border-right: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+}
+
+.h2numbers img{
+  padding-right: 50px;
+}
+
+.panel button{
+  height: 30px;
+  width: 120px;
+  background-color: #98FB98;
+}
+
+.table-size td input{
+  border: 1px solid red;
+}
+/* BOTTOM VIDEO PART */
 
 .bottom-part{
   background-image: url("./bottomone.jpg");
   background-size: cover;
   background-color: #9DA971;
-  height: 800px;
-  opacity: 0.5;
-}
-h1 a, h2 a {
-    color: #C25100;
+  height: 700px;
+  padding-top: 0px;
+  text-align: center;
+  display: block;
 }
 
-body {
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: #DFEAEB;
+.bottom-part h2{
+  color: #10846C;
+  font-size: 35px;
+  text-align: center;
+  display: inline-block; /* first Display BLOCK then <p or <h Inline Block */
 }
+
+.bottom-part-video{
+  margin: 0 auto;
+  width: 700px;
+  position: relative;
+  padding-bottom: 45%;
+  padding-top: 50px;
+  height: 0px;
+}
+
+
+.bottom-part-video iframe{
+  position: center;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 140px;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-home{
+  height: 210px;
+  width: 100%;
+  text-align: center;
+  color: #1A1554;
+  background-color:#2CC205;
+  display: block;
+}
+
+.contact-home h2{
+  display: inline-block;
+}
+
+.location{
+  /*height: 100vh; 100% of the height. Very handy when doing full screen slides */
+  width: 100%;
+  height: 100px;
+  display: flex; /* kinda displaying one line left to right */
+  justify-content: center;
+  align-items: center;
+}
+
+.location .location-box{
+  position: relative;
+  width: 300px;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,.2);
+  color: #1A1554;
+  overflow: hidden;
+}
+
+.location .location-box:last-child{
+  border: none;
+}
+
+.location .location-box .location-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.location .location-box .location-icon .fa{
+  padding-right: 10px;
+  transition: 0.5s;
+}
+
+.location .location-box:hover .location-icon{
+  transform: translateY(-100%);
+}
+
+.location .location-box:hover .location-icon .fa{
+  transform: translateY(60px);
+  font-size: 50px;
+  opacity: .2;
+  transition-delay: .5s;
+  z-index: -1;
+}
+
+.location .location-box .location-details{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.location .location-box:hover .location-details{
+  transform: translateY(0);
+}
+
+.copyright{
+  background-color:#1A1554;
+  height: 30px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+}
+.copyright p{
+  color: white;
+  font-size: 16px;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+#body{
+
+}
+
+#footer{
+  position: absolute;
+  height: 245px;
+  padding-top: 500px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* CONTACT PAGE */
+
+.contact-top{
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: center;
+  background-image: url("./contact.jpg");
+  background-size: cover;
+  height: 350px;
+  font-size: 63px;
+  color: #9ACD32;
+}
+
+.contact-top .rwandag{
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 10px;
+  font-size: 70px;
+}
+
+.contact-us{
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.contact-usintro{
+  text-align: center;
+  font-size: 20px;
+}
+
+
 
 
 /* MEDIA QUERRIES */
@@ -165,7 +514,252 @@ body {
     padding-top: 30px;
   }
   body {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+  .amafaranga{
+    padding-top: 100px;
+  }
+  .project-part{
+    padding-top:130px;
+  }
+  .about-part{
+    padding-top:130px;
+  }
+}
+
+
+
+/* Mobile Styles */
+@media only screen and (min-width: 320px) and (max-width: 770px) {
+  body {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  .bottom-part{
+    display: none; /*This removes the content of this element at that size */
+  }
+  .numbers-part{
+    background-color: #DFEAEB;
+  }
+  .amafaranga{
+    padding: 2px 6px;
+  }
+
+  .amafaranga{
+    padding-top: 100px;
+  }
+
+  caption{
+    height: 25px;
+    font-size: 18px;
+  }
+
+table{
+  width: 100%;
+}
+
+.amafaranga p{
+  font-size: 12px;
+}
+
+.amafaranga h2{
+padding-top: 18px;
+}
+
+.amafaranga ul{
+  font-size: 12px;
+}
+tr {
+    display: table-row;
+    vertical-align: middle;
+  }
+  .panel2 {
+      padding: 2px;
+      display: block;
+  }
+  .panel2 h2{
+    font-size: 20px;
+  }
+  .panel2 h2 img{
+    height:40px;
+    width:150px;
+    }
+
+  .panel button{
+    height: 20px;
+    width: 80px;
+  }
+  .h2results{
+    font-size: 20px;
+  }
+
+  .project-part h1{
+    font-size: 24px;
+  }
+
+  .project-part h3{
+    font-size: 20px;
+  }
+  .project-part{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .project-part{
+    padding-top:130px;
+  }
+
+  .project-part p{
+    font-size: 12px;
+  }
+
+.nyamasheke p{
+  font-size: 14px;
+}
+.nyamasheke img{
+  width: 70%;
+  margin: 1px auto;
+  display: block;
+  Height: 50%;
+}
+
+  /* CONTACT PAGE */
+
+  .contact-top{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 300px;
+    font-size: 40px;
+  }
+
+  .contact-top .rwandag{
+    letter-spacing: 2px;
+    font-size: 44px;
+  }
+
+  .contact-us{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .contact-usintro{
+    font-size: 14px;
+  }
+
+
+  /* ABOUT PAGE HERE */
+  .about-part{
+    padding-right:10px;
+    padding-left: 10px;
+  }
+
+  .about-part{
+    padding-top:130px;
+  }
+
+  .about-part h2{
+    font-size: 20;
+  }
+  .about-part p, ul{
+    font-size: 16px;
+  }
+
+  .aboutpoint h2{
+  font-size: 25px;
+  }
+  .auto-slider_conentent li h2{
+    font-size: 20px;
+  }
+
+  .agriquotes p{
+    font-size: 14px;
+  }
+  .agriquotes img{
+    width: 70%;
+    margin: 1px auto;
+    display: block;
+    Height: 50%;
+  }
+
+  .twandikire{
+    text-align: center;
+    padding-top: 500px;
+    font-size: 24px;
+  }
+
+  /* ICONS IN THE MIDDLE */
+  .middle-part{
+    display: block;
+    height: 800px;
+  }
+
+  .icon{
+    margin-top: 20px;
+    width: 30%;
+    margin: 5px 50px;
+  }
+
+  /* CALCULATE HOMEPAGE BUTTON HERE */
+
+  .numbers-part{
+    height: 80px;
+    display: inline-block;
+  }
+
+  .numbers-part h2{
+      font-size: 22px;
+  }
+
+  .contact-home h2{
+    font-size: 20px;
+  }
+  .contact-home h4{
+    font-size: 14px;
+  }
+
+  .location{
+    /*height: 100vh; 100% of the height. Very handy when doing full screen slides */
+    width: 100%;
+    height: 60px;
+    padding-top: 35px;
+  }
+
+  .location .location-box{
+    position: relative;
+    width: 300px;
+    height: 60px;
+  }
+
+
+  .location .location-box .location-icon{
+    font-size: 16px;
+  }
+
+  .location .location-box .location-icon .fa{
+    padding-right: 5px;
+  }
+
+  .location .location-box:hover .location-icon{
+    transform: translateY(-100%);
+  }
+
+  .location .location-box:hover .location-icon .fa{
+    transform: translateY(60px);
+    font-size: 30px;
+  }
+
+  .location .location-box .location-details{
+    font-size: 12px;
+  }
+
+  .copyright{
+    height: 24px;
+    margin-bottom: 1px;
+  }
+  .copyright p{
+    font-size: 12px;
+    padding-top: 1px;
+  }
+
 }

@@ -3,30 +3,254 @@
 <html lang="en">
   <head>
     <title>RwandAg</title>
+    <link rel="shortcut icon" type="image/png" href="../static/css/favicon.png">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/psite.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <nav>
       <ul>
-        <img src="../static/css/logo.png" >
+        <a href="/"><img src="../static/css/logo.png" ></a>
         <li><a href="/">Home</a></li>
         <li><a href="../about">About</a></li>
         <li><a href="#">Important Links</a>
           <ul>
-            <li><a href="#">MINAGRI</a></li>
-            <li><a href="#">RAB</a></li>
-            <li><a href="#">Updates</a></li>
-            <li><a href="#">Videos</a></li>
+            <li><a href="https://www.minagri.gov.rw/index.php?id=16" target="_blank">MINAGRI</a></li>
+            <li><a href="http://www.rab.gov.rw/index.php?id=180" target="_blank">RAB</a></li>
+            <li><a href="https://twitter.com/RwandaAgri" target="_blank">Updates</a></li>
+            <li><a href="https://www.youtube.com/channel/UCB-oYINxgCdmyEnPi-SWAZw/videos" target="_blank">Videos</a></li>
           </ul>
         </li>
         <li><a href="../projects">Projects</a></li>
       </ul>
     </nav>
-    <h2>CALCULATION Page</h2>
-      <p>Let's do your numbers and stay profitable</p>
+    <br>
+    <div class="amafaranga">
+      <h2>Farm Profit Calculator</h2>
+        <p>This Farm Profit Calculator is a simple tool we have crafted in order to help you estimate
+          the seasonal short term (planting to harvest) Net Profit of your agricultural activities.
+          Fill in your seasonal numbers and click on "Calculate" button.
+          Plug in zero in a place that does not apply to you.</p>
+         <br>
+         <p>All amount should be the equivalent value in <strong>RWF - Rwandan Franc</strong></p>
+         <br>
+        <ul>
+          <li><strong>Sales</strong> is the lump sum of all income from your seasonal agricultural
+            activities.</li>
+            <br>
+          <li><strong>COGS:</strong> Cost of goods sold is the total direct cost of required materials
+            used to produce the goods sold. Cost of feed in case of cattle and pesticides in case of crops
+            can be included here.</li>
+            <br>
+          <li><strong>Expenses</strong> includes rent, salaries, transport cost, communication, and
+            veterinary costs in case of cattle and other expenses that are related to work efficiency.</li>
+            <br>
+          <li><strong>DA:</strong> Depreciation and Amortization are the non-cash charges that are crucial
+             for calculating net profit of your agricultural activities. Depreciation is the declining in
+              asset value of the course of its useful life. Click <a href="https://www.calculator.net/depreciation-calculator.html" target="_blank">here</a>
+              for calculation and details. Amortization is the same thing except that is
+            used for an intangible asset over a specific period of time.</li>
+            <br>
+          <li><strong>Interest</strong> is here considered as the cost charged on borrowed money. If you
+              do not have bank loan or did not borrow money, this does not apply to you.</li>
+              <br>
+          <li><strong>Tax:</strong> is a compulsory contribution to state revenue. It changes from year to
+             year. Check out more information about <a href="https://www.rra.gov.rw/index.php?id=31&L=134" target="_blank">Personal</a> Income Tax,
+             <a href="https://www.rra.gov.rw/index.php?id=7&L=134" target="_blank">District</a> Revenues,
+             and <a href="https://www.rra.gov.rw/index.php?id=36&L=134" target="_blank">VAT</a> - Value Added Tax services
+             if you do agricultural commercial activities.</li>
+        </ul>
+    </div>
+    <table  class="panel2" cellspacing="0" cellpadding="0" border="0" id="printTable">
+      <tbody>
+        <caption><strong>Fill in your numbers and hit Calculate button</strong></caption>
+        <tr align="center">
+          <td width="40%">
+            <h2 class="h2numbers">
+              <img src="../static/css/logo.png" height="55px;" width="180px;" >Your Numbers</h2>
+            <div class="panel">
+              <table align="center">
+                <tbody>
+                  <tr>
+                    <td>
+                      <form name="calform">
+                        <br>
+                        <div class="table-size">
+                            <table id="rsales" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">Sales</td>
+                                  <td><input type="number" id="sales">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table id="rcogs" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">COGS</td>
+                                  <td><input type="number" id="cogs">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table id="rexpenses" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">Expenses</td>
+                                  <td><input type="number" id="expenses">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table id="rdamor" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">Depreciation and Amortization</td>
+                                  <td><input type="number" id="damor">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table id="rinterest" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">Interest</td>
+                                  <td><input type="number" id="interest">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table id="rtaxes" width="400" style="display: block;">
+                              <tbody>
+                                <tr>
+                                  <td width="200">Taxes</td>
+                                  <td><input type="number" id="taxes">RWF</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <button onclick="return calculate();">Calculate</button>
+                        <br>
+                      </form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+          <td width="5%"></td>
+        <tr>
+          <td>
+            <h2 class="h2results" style="background-color:#3CB371;">Your Results</h2>
+            <br>
+            <p>According to the numbers your provided, here are the estimated results of
+              your business performance. Pay close attention to the value of <strong>Net Profit</strong>.<br>
+              A NEGATIVE value is LOSS.<br> A POSITIVE value is PROFIT.<br> Good news is we
+              can connect you with investors and expand your business. <a href="../contact" target="_blank"><strong>Contact us</strong></a>
+               <br>____Results below are in <strong>RWF - Rwandan Franc</strong>____
+            <table cellpadding="3" width="100%">
+              <tbody>
+                <tr bgcolor="#E6E6FA">
+                  <td><strong>Gross Profit</strong></td>
+                  <td id="finalresult1"></td>
+                </tr>
+                <tr>
+                  <td><strong>EBITDA *</strong></td>
+                  <td id="finalresult2"></td>
+                </tr>
+                <tr bgcolor="#E6E6FA">
+                  <td><strong>EBIT *</strong></td>
+                  <td id="finalresult3"></td>
+                </tr>
+                <tr>
+                  <td><strong>Profit Before Tax</strong></td>
+                  <td id="finalresult4"></td>
+                </tr>
+                <tr bgcolor="#E6E6FA">
+                  <td><strong>Net Profit</strong></td>
+                  <td id="finalresult5"></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="printing">
+              <p>EBITDA * :Earnings Before Interest, Taxes, Depreciaition and Amortization</p>
+              <p>EBIT * :Earnings Before Interest and Taxes</p>
+              <button onclick="return printData();" style="background-color: #3CB371;">Print me</button>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <div id="body">
+        <div class="contact-home" id="our-contact">
+          <h2>Our Mission<h2>
+            <h4>Connecting Rwandan farmers to agricultural investors for sustainable Rwanda Food Security </h4>
+            <div class="location">
+              <div class="location-box">
+                <div class="location-icon"><i class="fa fa-map-marker" aria-hidden="true"></i> Our Location</div>
+                <div class="location-details">Rwanda</div>
+              </div>
+              <div class="location-box">
+                <div class="location-icon"><i class="fa fa-phone" aria-hidden="true"></i> Call Us</div>
+                <div class="location-details">+250 732 393 402</div>
+              </div>
+              <div class="location-box">
+                <div class="location-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i> Write Us</div>
+                <div class="location-details"><a href="../contact" target="_blank">Contact us</a></div>
+              </div>
+            </div>
+        </div>
+        <div class="copyright">
+          <p><i class="fa fa-copyright" aria-hidden="true"></i>  2019  RwandAg</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<script>
+function calculate() {
+	let sales = document.getElementById('sales').value;
+  	let cogs = document.getElementById('cogs').value;
+    let expenses = document.getElementById('expenses').value;
+    let damor = document.getElementById('damor').value;
+    let interest = document.getElementById('interest').value;
+    let taxes = document.getElementById('taxes').value;
+  	let result = sales - cogs;
+    let result1 = result - expenses;
+    let result2 = result1 - damor;
+    let result3 = result2 - interest;
+    let result4 = result3 - taxes;
+  	document.getElementById('finalresult1').innerText = result;
+    document.getElementById('finalresult2').innerText = result1;
+    document.getElementById('finalresult3').innerText = result2;
+    document.getElementById('finalresult4').innerText = result3;
+    document.getElementById('finalresult5').innerText = result4;
+    return false;
+}
+
+function printData()
+{
+   var divToPrint=document.getElementById("printTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+
+$('button').on('click',function(){
+printData();
+})
+</script>
