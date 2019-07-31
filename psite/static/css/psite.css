@@ -186,7 +186,7 @@ nav ul li ul li{
 
 .twandikire{
   text-align: center;
-  padding-top: 500px;
+  padding-top: 300px;
   font-size: 24px;
 }
 
@@ -308,6 +308,11 @@ caption{
     border-left: 1px solid #bbbbbb;
 }
 
+  .h2results{
+    padding-left: 50px;
+  }
+
+
 .h2numbers img{
   padding-right: 50px;
 }
@@ -340,25 +345,11 @@ caption{
   display: inline-block; /* first Display BLOCK then <p or <h Inline Block */
 }
 
-.bottom-part-video{
-  margin: 0 auto;
-  width: 700px;
-  position: relative;
-  padding-bottom: 45%;
-  padding-top: 50px;
-  height: 0px;
-}
-
-
 .bottom-part-video iframe{
-  position: center;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  padding-top: 140px;
-  height: 100%;
-  width: 100%;
+  display: center;
+  width:45%;
+  height: 550px;
+  padding-top: 170px;
 }
 
 .contact-home{
@@ -464,7 +455,7 @@ caption{
 #footer{
   position: absolute;
   height: 245px;
-  padding-top: 500px;
+  padding-top: 300px;
   position: relative;
   padding-bottom: 5px;
 }
